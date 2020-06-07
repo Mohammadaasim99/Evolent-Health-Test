@@ -1,0 +1,96 @@
+<mat-card>
+    <mat-card-title>
+        <h3 *ngIf='isNew'>Add New Employee</h3>
+        <h3 *ngIf='!isNew'>Edit Employee</h3>
+    </mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="employeeForm" class="contact-form" (ngSubmit)="onSave()">
+            <mat-form-field class="input-full-width ">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName='fname' autocomplete="'no'" matInput
+                    placeholder="Enter your first name...">
+            </mat-form-field>
+            <mat-form-field class="input-full-width ">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName='lname' autocomplete="'no'" matInput
+                    placeholder="Enter your last name...">
+            </mat-form-field>
+            <mat-form-field class="input-full-width ">
+                <mat-label>Phone No</mat-label>
+                <input matInput type="number" formControlName='phone' autocomplete="'no'" matInput
+                    placeholder="Enter your phone  no...">
+            </mat-form-field>
+
+            <mat-form-field class="input-full-width ">
+                <mat-label>Status</mat-label>
+                <mat-select formControlName='status'>
+                    <mat-option *ngFor="let status of statuses" [value]="status">
+                        {{status}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="input-full-width ">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName='email' type="email" autocomplete="'no'" matInput
+                    placeholder="Enter your email...">
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit" class="mr-15 "
+                [disabled]='!employeeForm.valid'>Submit </button>
+            <button mat-raised-button [routerLink]="['../../']">Back</button>
+        </form>
+    </mat-card-content>
+</mat-card>
+<!-- <form [formGroup]="employeeForm" (ngSubmit)="onSave()">
+    <div class="row">
+        <div class="col">
+            <mat-form-field appearance="fill" class='search-box'>
+                <mat-label>First Name</mat-label>
+                <input formControlName='fname' autocomplete="'no'" matInput placeholder="Enter your name..."
+                    type="text" minlength="4"/>
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field appearance="fill" class='search-box'>
+                <mat-label>Phone</mat-label>
+                <input formControlName='phone' autocomplete="'no'" matInput placeholder="Enter your Phone number..."
+                    type="number" />
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <mat-form-field appearance="fill" class='search-box'>
+                <mat-label>City</mat-label>
+                <input formControlName='city' autocomplete="'no'" matInput placeholder="Enter your city..."
+                    type="text" />
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field appearance="fill" class='search-box'>
+                <mat-label>Address Line 1</mat-label>
+                <input formControlName='addressLine1' autocomplete="'no'" matInput placeholder="Enter Address Line 1..."
+                    type="text" />
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <mat-form-field appearance="fill" class='search-box'>
+                <mat-label>Address Line 2</mat-label>
+                <input formControlName='addressLine2' autocomplete="'no'" matInput placeholder="Enter Address Line 2..."
+                    type="text" />
+            </mat-form-field>
+        </div>
+        <div class="col">
+            <mat-form-field appearance="fill" class='search-box'>
+                <mat-label>Postal Code</mat-label>
+                <input formControlName='postalCode' autocomplete="'no'" matInput placeholder="Enter Postal Code..."
+                    type="text" />
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="row">
+        <button type="submit" [disabled]='!employeeForm.valid'>Submit</button>
+    </div>
+</form> -->

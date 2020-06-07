@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+table {
+  width: 100%;
+}
+.filter-field {
+  font-size: 14px;
+  width: 40%;
+  margin: auto;
+  float: none;
+  display: block !important;
+}
+.add-new {
+  float: right;
+  bottom: 15px;
+  right: 25px;
+  top: -53px;
+}

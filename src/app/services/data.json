@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "fname": "Jhon",
+            "lname": "Smith",
+            "phone": "9999999999",
+            "email": "test@test.com",
+            "status": "Active"
+        },
+        {
+            "id": 2,
+            "fname": "Jhone",
+            "lname": "Jacob",
+            "phone": "8745632875",
+            "email": "smile@test.com",
+            "status": "Active"
+        },
+        {
+            "id": 3,
+            "fname": "Jhone",
+            "lname": "Ari",
+            "phone": "2459535845",
+            "email": "friend@test.com",
+            "status": "Inactive"
+        }
+    ]
+}
